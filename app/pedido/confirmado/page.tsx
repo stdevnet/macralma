@@ -27,7 +27,11 @@ function ConfirmadoContenido() {
   const token = searchParams.get("token");
 
   const [pedido, setPedido] = useState<Pedido | null>(null);
-  const [cargando, setCargando] = useState(true);
+
+  const [cargando, setCargando] = useState(() => {
+    return Boolean(pedidoId && token);
+  });
+
   const [error, setError] = useState("");
 
   const numeroWhatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "";
@@ -36,14 +40,16 @@ function ConfirmadoContenido() {
 
   useEffect(() => {
     if (!pedidoId || !token) {
-      setCargando(false);
       return;
     }
+
+    const id = pedidoId;
+    const authToken = token;
 
     async function obtenerPedido() {
       try {
         const response = await fetch(
-          `/api/pedidos/${pedidoId}?token=${encodeURIComponent(token)}`,
+          `/api/pedidos/${id}?token=${encodeURIComponent(authToken)}`,
         );
 
         const data = await response.json();
@@ -78,8 +84,11 @@ function ConfirmadoContenido() {
       return "";
     }
 
-    return `${window.location.origin}/pedido/${pedidoId}?token=${encodeURIComponent(
-      token,
+    const id = pedidoId;
+    const authToken = token;
+
+    return `${window.location.origin}/pedido/${id}?token=${encodeURIComponent(
+      authToken,
     )}`;
   }, [pedidoId, token]);
 
