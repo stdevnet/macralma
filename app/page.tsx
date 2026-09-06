@@ -1,69 +1,99 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="bg-[#FAF7F2]">
+      {/* HERO */}
+      <section className="bg-[#E8D8C3]">
+        <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 text-center">
+          <p className="text-sm md:text-base uppercase tracking-[0.25em] text-[#756B60] mb-6">
+            Hecho a mano
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[#29251F]">
+            Prendas tejidas
+            <br />a mano
+          </h1>
+
+          <p className="max-w-2xl mx-auto mt-7 text-lg md:text-xl leading-relaxed text-[#756B60]">
+            Prendas y adornos hechos a mano con cariño y dedicación, creando
+            piezas únicas para cada ocasión.
+          </p>
+
+          <Link
+            href="/catalogo"
+            className="inline-flex items-center justify-center mt-10 bg-[#29251F] text-white px-8 py-4 rounded-full font-medium hover:bg-[#403A32] transition-all duration-300 hover:scale-105"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Ver catálogo
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* PRESENTACIÓN */}
+      <section className="max-w-5xl mx-auto px-6 py-20 md:py-24 text-center">
+        <p className="text-sm uppercase tracking-[0.2em] text-[#9A8B78] mb-4">
+          Nuestra esencia
+        </p>
+
+        <h2 className="text-3xl md:text-4xl font-bold text-[#29251F]">
+          Cada pieza tiene su propia historia
+        </h2>
+
+        <p className="max-w-2xl mx-auto mt-6 text-base md:text-lg leading-relaxed text-[#756B60]">
+          Dedicamos tiempo y cuidado a cada creación para ofrecer prendas y
+          adornos elaborados de forma artesanal, cuidando cada detalle.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#E8DED1]">
+            <h3 className="text-lg font-semibold text-[#29251F]">
+              Hecho a mano
+            </h3>
+
+            <p className="mt-3 text-sm leading-relaxed text-[#756B60]">
+              Cada pieza es elaborada cuidadosamente de manera artesanal.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#E8DED1]">
+            <h3 className="text-lg font-semibold text-[#29251F]">
+              Piezas únicas
+            </h3>
+
+            <p className="mt-3 text-sm leading-relaxed text-[#756B60]">
+              Diseños especiales creados con dedicación y personalidad.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#E8DED1]">
+            <h3 className="text-lg font-semibold text-[#29251F]">Con cariño</h3>
+
+            <p className="mt-3 text-sm leading-relaxed text-[#756B60]">
+              Ponemos ilusión y cuidado en cada una de nuestras creaciones.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
+      <section className="bg-[#F1E6D8]">
+        <div className="max-w-4xl mx-auto px-6 py-16 md:py-20 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#29251F]">
+            Descubre nuestra colección
+          </h2>
+
+          <p className="mt-4 text-[#756B60]">
+            Encuentra tu próxima pieza hecha a mano.
+          </p>
+
+          <Link
+            href="/catalogo"
+            className="inline-block mt-7 border border-[#29251F] text-[#29251F] px-7 py-3 rounded-full font-medium hover:bg-[#29251F] hover:text-white transition-colors"
+          >
+            Explorar catálogo
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }
