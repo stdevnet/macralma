@@ -2,17 +2,24 @@ export default function SobreNosotros() {
   return (
     <main className="min-h-screen bg-[#FAF7F2]">
       {/* HERO */}
-      <section className="bg-[#E8D8C3]">
-        <div className="max-w-5xl mx-auto px-6 py-20 md:py-24 text-center">
-          <p className="text-sm md:text-base uppercase tracking-[0.25em] text-[#756B60] mb-5">
+      <section
+        className="relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/Fondo-Macralma.png')",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#29251F]/55"></div>
+
+        <div className="relative max-w-5xl mx-auto px-6 py-20 md:py-24 text-center">
+          <p className="text-sm md:text-base uppercase tracking-[0.25em] text-[#F1E6D8] mb-5">
             Nuestra historia
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-[#29251F]">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white">
             Sobre nosotros
           </h1>
 
-          <p className="max-w-2xl mx-auto mt-6 text-lg md:text-xl leading-relaxed text-[#756B60]">
+          <p className="max-w-2xl mx-auto mt-6 text-lg md:text-xl leading-relaxed text-[#F1E6D8]">
             Un pequeño proyecto familiar donde cada pieza se crea a mano, con
             cariño, dedicación y mucha ilusión.
           </p>
