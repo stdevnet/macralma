@@ -4,18 +4,25 @@ export default function Home() {
   return (
     <main className="bg-[#FAF7F2]">
       {/* HERO */}
-      <section className="bg-[#E8D8C3]">
-        <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 text-center">
-          <p className="text-sm md:text-base uppercase tracking-[0.25em] text-[#756B60] mb-6">
+      <section
+        className="relative bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/Fondo-Macralma.png')" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#29251F]/55"></div>
+
+        {/* Contenido */}
+        <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32 text-center">
+          <p className="text-sm md:text-base uppercase tracking-[0.25em] text-[#F1E6D8] mb-6">
             Hecho a mano
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[#29251F]">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
             Prendas tejidas
             <br />a mano
           </h1>
 
-          <p className="max-w-2xl mx-auto mt-7 text-lg md:text-xl leading-relaxed text-[#756B60]">
+          <p className="max-w-2xl mx-auto mt-7 text-lg md:text-xl leading-relaxed text-[#F1E6D8]">
             Prendas y adornos hechos a mano con cariño y dedicación, creando
             piezas únicas para cada ocasión.
           </p>
